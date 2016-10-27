@@ -18,11 +18,16 @@ class Transcript {
     parent = Parent;
     graduation = Graduation;
   }
+  
+  //These functions work, although because they are so similar, 
+  //it may be easier to change them to a single function that outputs 
+  //a HashMap<String, Integer> instead of being void types.
+  
   public void addGradeOne(HashMap<String, Integer> ninthGrade){
     Scanner inputClass = new Scanner(System.in);
     System.out.print("Class: ");
     String notClass = inputClass.next();
-
+    
     Scanner iinputGrade = new Scanner(System.in);
     System.out.print("Grade in class: ");
     int classGrade = iinputGrade.nextInt();
@@ -103,6 +108,8 @@ class Transcript {
         System.out.print("Type 1 to add a class from 9th grade, or 2 to quit: ");
         int freshmanYear = freshClass.nextInt();
         if(freshmanYear == 1){
+          //if addGrade(listOfClasses) returned a HashMap, we could do something like-
+          //ninthGrade = student.addGrade(ninthClasses);
           student.addGradeOne(ninthGrade);
         }
         else if(freshmanYear == 2){
