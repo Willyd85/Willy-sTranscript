@@ -19,13 +19,12 @@ class Transcript {
     graduation = Graduation;
   }
   public void addGrade(HashMap<String, Integer> year){
-    Scanner inputClass = new Scanner(System.in);
+    Scanner inputYear = new Scanner(System.in);
     System.out.print("Class: ");
-    String notClass = inputClass.next();
+    String notClass = inputYear.next();
 
-    Scanner iinputGrade = new Scanner(System.in);
     System.out.print("Grade in class: ");
-    int classGrade = iinputGrade.nextInt();
+    int classGrade = inputYear.nextInt();
     year.put(notClass, classGrade);
   }
   public static void main(String[] args) {
@@ -38,40 +37,33 @@ class Transcript {
 
     HashMap<String,Integer> tweflthGrade = new HashMap<String, Integer>();
 
-    Scanner inName = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
     System.out.print("Full Name: ");
-    String inputName = inName.next();
+    String inputName = input.next();
 
-    Scanner inAge = new Scanner(System.in);
     System.out.print("Age: ");
-    int inputAge = inAge.nextInt();
+    int inputAge = input.nextInt();
 
-    Scanner inAddress = new Scanner(System.in);
     System.out.print("Address: ");
-    String inputAddress = inAddress.next();
+    String inputAddress = input.next();
 
-    Scanner inPhone = new Scanner(System.in);
     System.out.print("Phone number: ");
-    String inputPhone = inPhone.next();
+    String inputPhone = input.next();
 
-    Scanner inBirth = new Scanner(System.in);
     System.out.print("Date of Birth: ");
-    String inputBirth = inBirth.next();
+    String inputBirth = input.next();
 
-    Scanner inParent = new Scanner(System.in);
     System.out.print("Parents name: ");
-    String inputParent = inParent.next();
+    String inputParent = input.next();
 
-    Scanner inputGrad = new Scanner(System.in);
     System.out.print("Graduation date: ");
-    String inGrad = inputGrad.next();
+    String inGrad = input.next();
 
     Transcript student = new Transcript(inputName, inputAge, inputAddress, inputPhone, inputBirth, inputParent, inGrad);
     while(true){
       while(true){
-        Scanner freshClass = new Scanner(System.in);
         System.out.print("Type 1 to add a class from 9th grade, or 2 to quit: ");
-        int freshmanYear = freshClass.nextInt();
+        int freshmanYear = input.nextInt();
         if(freshmanYear == 1){
           student.addGrade(ninthGrade);
         }
@@ -80,9 +72,8 @@ class Transcript {
         }
       }
       while(true){
-        Scanner sophClass = new Scanner(System.in);
         System.out.print("Press 1 to add a class from 10th grade, or 2 to quit: ");
-        int sophmoreYear = sophClass.nextInt();
+        int sophmoreYear = input.nextInt();
         if(sophmoreYear == 1){
           student.addGrade(tenthGrade);
         }
@@ -91,9 +82,8 @@ class Transcript {
         }
       }
       while(true){
-        Scanner junClass = new Scanner(System.in);
         System.out.print("Press 1 to add a class from 11th grade, or 2 to quit: ");
-        int juniorYear = junClass.nextInt();
+        int juniorYear = input.nextInt();
         if(juniorYear == 1){
           student.addGrade(eleventhGrade);
         }
@@ -102,9 +92,8 @@ class Transcript {
         }
       }
       while(true){
-        Scanner senClass = new Scanner(System.in);
         System.out.print("Press 1 to add a class from 12th grade, or 2 to quit: ");
-        int seniorYear = senClass.nextInt();
+        int seniorYear = input.nextInt();
         if(seniorYear == 1){
           student.addGrade(tweflthGrade);
         }
@@ -116,9 +105,8 @@ class Transcript {
     }
     int creds = 0;
     for(String nGrade : ninthGrade.keySet()){
-      Scanner input1Creds = new Scanner(System.in);
       System.out.print("Type 1 if course was full year or 2 if half: ");
-      int credss = input1Creds.nextInt();
+      int credss = input.nextInt();
 
       if(credss == 1){
         int ccreds = creds + 2;
@@ -130,9 +118,8 @@ class Transcript {
       }
     }
     for(String teGrade : tenthGrade.keySet()){
-      Scanner input2Creds = new Scanner(System.in);
       System.out.print("Type 1 if course was full year or 2 if half: ");
-      int c2redss = input2Creds.nextInt();
+      int c2redss = input.nextInt();
 
       if(c2redss == 1){
         int c2creds = creds + 2;
@@ -144,9 +131,8 @@ class Transcript {
       }
     }
     for(String elGrade : eleventhGrade.keySet()){
-      Scanner input3Creds = new Scanner(System.in);
       System.out.print("Type 1 if course was full year or 2 if half: ");
-      int c3redss = input3Creds.nextInt();
+      int c3redss = input.nextInt();
 
       if(c3redss == 1){
         int c3creds = creds + 2;
@@ -158,9 +144,8 @@ class Transcript {
       }
     }
     for(String tweGrade : tweflthGrade.keySet()){
-      Scanner input4Creds = new Scanner(System.in);
       System.out.print("Type 1 if course was full year or 2 if half: ");
-      int c4redss = input4Creds.nextInt();
+      int c4redss = input.nextInt();
 
       if(c4redss == 1){
         int c4creds = creds + 2;
