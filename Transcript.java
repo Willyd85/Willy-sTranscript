@@ -18,7 +18,7 @@ class Transcript {
     parent = Parent;
     graduation = Graduation;
   }
-  public void addGradeOne(HashMap<String, Integer> ninthGrade){
+  public void addGrade(HashMap<String, Integer> year){
     Scanner inputClass = new Scanner(System.in);
     System.out.print("Class: ");
     String notClass = inputClass.next();
@@ -26,37 +26,7 @@ class Transcript {
     Scanner iinputGrade = new Scanner(System.in);
     System.out.print("Grade in class: ");
     int classGrade = iinputGrade.nextInt();
-    ninthGrade.put(notClass, classGrade);
-  }
-  public void addGradeTwo(HashMap<String, Integer> tenthGrade){
-    Scanner inputClass = new Scanner(System.in);
-    System.out.print("Class: ");
-    String notClass = inputClass.next();
-
-    Scanner iinputGrade = new Scanner(System.in);
-    System.out.print("Grade in class: ");
-    int classGrade = iinputGrade.nextInt();
-    tenthGrade.put(notClass, classGrade);
-  }
-  public void addGradeThree(HashMap<String, Integer> eleventhGrade){
-    Scanner inputClass = new Scanner(System.in);
-    System.out.print("Class: ");
-    String notClass = inputClass.next();
-
-    Scanner iinputGrade = new Scanner(System.in);
-    System.out.print("Grade in class: ");
-    int classGrade = iinputGrade.nextInt();
-    eleventhGrade.put(notClass, classGrade);
-  }
-  public void addGradeFour(HashMap<String, Integer> tweflthGrade){
-    Scanner inputClass = new Scanner(System.in);
-    System.out.print("Class: ");
-    String notClass = inputClass.next();
-
-    Scanner iinputGrade = new Scanner(System.in);
-    System.out.print("Grade in class: ");
-    int classGrade = iinputGrade.nextInt();
-    tweflthGrade.put(notClass, classGrade);
+    year.put(notClass, classGrade);
   }
   public static void main(String[] args) {
     int allCredits = 0;
@@ -103,7 +73,7 @@ class Transcript {
         System.out.print("Type 1 to add a class from 9th grade, or 2 to quit: ");
         int freshmanYear = freshClass.nextInt();
         if(freshmanYear == 1){
-          student.addGradeOne(ninthGrade);
+          student.addGrade(ninthGrade);
         }
         else if(freshmanYear == 2){
           break;
@@ -114,7 +84,7 @@ class Transcript {
         System.out.print("Press 1 to add a class from 10th grade, or 2 to quit: ");
         int sophmoreYear = sophClass.nextInt();
         if(sophmoreYear == 1){
-          student.addGradeTwo(tenthGrade);
+          student.addGrade(tenthGrade);
         }
         else if(sophmoreYear == 2){
           break;
@@ -125,7 +95,7 @@ class Transcript {
         System.out.print("Press 1 to add a class from 11th grade, or 2 to quit: ");
         int juniorYear = junClass.nextInt();
         if(juniorYear == 1){
-          student.addGradeThree(eleventhGrade);
+          student.addGrade(eleventhGrade);
         }
         else if(juniorYear == 2){
           break;
@@ -136,7 +106,7 @@ class Transcript {
         System.out.print("Press 1 to add a class from 12th grade, or 2 to quit: ");
         int seniorYear = senClass.nextInt();
         if(seniorYear == 1){
-          student.addGradeFour(tweflthGrade);
+          student.addGrade(tweflthGrade);
         }
         else if(seniorYear == 2){
           break;
